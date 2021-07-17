@@ -25,7 +25,7 @@ class Answer(models.Model):
 
 
 class Test(models.Model):
-    title = models.CharField(max_length=200, blank=True, null=True, unique=True)
+    title = models.CharField(max_length=200, unique=True)
     questions = models.ManyToManyField(Question, related_name="test", blank=True)
     
     def __str__(self):
